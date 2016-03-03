@@ -42,6 +42,7 @@ clickCount=clickCount+1;
   }
   if(clickCount==2) {
     secondColor=secretSquareColor;
+    checkMatches();
   }
 }
 
@@ -52,9 +53,12 @@ function checkMatches(){
   // STEP FOUR
   //create a conditional that says if firstColor is the same as secondColor, alert to the user "You Win!"
   // else alert to the user "Try again!"
-  
-  
-  
+if (firstColor==secondColor) {
+  alert("You Win!");
+}
+else{
+  alert("Try Again!")
+}
 
   // STEP FIVE
   //execute the function resetSquares
@@ -68,7 +72,7 @@ function resetSquares()
 {
   // STEP SIX
   // reset the clickCount variablel to 0
-  
+  clickCount = 0;
   
   
   $("#clickCount").html(clickCount);
@@ -76,6 +80,6 @@ function resetSquares()
   
   // STEP SEVEN
   // change all elements with the class picture-box to have a background color of #cccccc
-  
+  $(".picture-box").css("background-color", "cccccc");
 
 }
